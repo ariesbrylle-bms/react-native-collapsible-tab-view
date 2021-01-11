@@ -20,9 +20,6 @@
     "prepack": "bob build",
     "prepare": "bob build"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "keywords": [
     "react-native-component",
     "react-component",
@@ -34,16 +31,6 @@
     "scrollable",
     "coverflow"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PedroBern/react-native-collapsible-tab-view.git"
-  },
-  "author": "Pedro Bern <pedrobermoreira@gmail.com> (https://github.com/pedrobern/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pedrobern/react-native-collapsible-tab-view/issues"
-  },
-  "homepage": "https://github.com/PedroBern/react-native-collapsible-tab-view#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^9.1.1",
     "@expo/vector-icons": "^10.2.0",
@@ -77,12 +64,6 @@
     "react": "*",
     "react-native": "*",
     "react-native-tab-view": "*"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint && yarn typescript"
-    }
   },
   "jest": {
     "preset": "react-native",
