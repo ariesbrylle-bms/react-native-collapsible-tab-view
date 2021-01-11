@@ -17,7 +17,8 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "bootstrap": "yarn example && yarn",
-    "prepack": "bob build"
+    "prepack": "bob build",
+    "prepare": "bob build"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -63,6 +64,7 @@
     "prettier": "2.0.5",
     "react": "~16.11.0",
     "react-native": "~0.62.2",
+    "react-native-builder-bob": "^0.17.1",
     "react-native-gesture-handler": "~1.6.0",
     "react-native-reanimated": "~1.9.0",
     "react-native-tab-view": "^2.15.2",
@@ -100,5 +102,18 @@
   },
   "dependencies": {
     "use-debounce": "^5.1.0"
-  }
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ]
 }

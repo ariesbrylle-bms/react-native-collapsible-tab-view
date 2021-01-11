@@ -415,6 +415,13 @@ const CollapsibleTabView = <
     isUserInteracting.current = false;
   }, []);
 
+  const onTabIndexChanged = (index: number) => {
+    console.log('HEREEE');
+    const { onIndexChange } = tabViewProps;
+    onIndexChange && onIndexChange(index);
+    syncScrollOffsets();
+  };
+
   return (
     <View
       style={styles.container}
@@ -439,6 +446,7 @@ const CollapsibleTabView = <
       >
         <TabView
           {...tabViewProps}
+          onIndexChange={onTabIndexChanged}
           navigationState={{ index, routes }}
           renderTabBar={renderTabBar}
         />
